@@ -40,11 +40,7 @@ button {
         width: 50%;
         text-align: center;
         font-size: 16px;
-        }
- form {   
-        border: 3px solid #03436d;   
-        text-align: center;
-    }   
+        }  
  input[type=text], input[type=password] {   
         width: 80%;   
         margin: 8px;  
@@ -66,6 +62,7 @@ button {
         padding: 20px;   
         background-color: rgb(0, 0, 0);  
         border: 5px double greenyellow;
+        text-align: center;
     }
 
 h1 {
@@ -95,23 +92,24 @@ hr.line{
     <p> Welcome to online CV builder </p>
     <p> The easiest and most convenient option for building a resume </p>
     <hr class="line">
-    <br/>
-    <form>  
-        <div class="container">   
-            <label>Username : </label>
-            <br/>   
-            <input type="text" placeholder="Input Username" name="username" required>  
-            <br/>
-            <label>Password : </label>
-            <br/>   
-            <input type="password" placeholder="Input Password" name="password" required> 
-            <button type="submit" class="button" onclick="check(this.form)">Login</button>
-        </div>   
-    </form>
+    <br/> 
+    <div class="container">   
+        <label>Username : </label>
+        <br/>   
+        <input type="text" id="username" placeholder="Input Username" name="username" required>  
+        <br/>
+        <label>Password : </label>
+        <br/>   
+        <input type="password" id="password" placeholder="Input Password" name="password" required> 
+        <button type="submit" class="button" onclick="check()">Login</button>
+    </div>   
     <script language="javascript">
-        function check(form) { 
-            if(form.username.value == "leon" && form.password.value == "44") {
-                alert("correct")
+        const log = document.getElementById("username");
+        const pass = document.getElementById("password");
+        function check() { 
+            if(log.value == "leon" && pass.value == "44") 
+            {
+                window.location.href = "mainweb.html";
             }
             else {
                 alert("username or password incorrect")
