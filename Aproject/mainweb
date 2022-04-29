@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV form</title>
+<link rel="icon" type="image/x-icon" href="/Users/leon/Downloads/Aproject/tie.png">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body{
+    font-family: 'Times New Roman', Times, serif;
+    height: auto;
+    background-color: rgb(220, 239, 255);
+}
+.body{
+    font-family: 'Times New Roman', Times, serif;
+    height: auto;
+    background-color: rgb(220, 239, 255);
+    text-align: center;
+}
+
+/* Style tab links */
+.tabbutton {
+  font-size: 17px; 
+  background-color: rgb(116, 212, 234);  
+  border: 5px double rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
+  display: inline-block;
+}
+
+.tabbutton:active {
+    background-color: rgb(35, 125, 243);
+    box-shadow: 0 5px rgb(80, 79, 79);
+    transform: scale(0.8,0.8);
+}
+
+.tabbutton:hover {
+  background-color: rgb(35, 125, 243);
+}
+
+.tab{
+    display: inline-block;
+    margin-left: 120px;
+}
+.tab1{
+    display: inline-block;
+    margin-left: 180px;
+}
+.tab2{
+    display: inline-block;
+    margin-left: 260px;
+}
+label{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+}
+
+h1 {
+        color: rgb(0, 0, 0);
+    }
+.h{
+        display: inline;
+}
+p, option{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.box{
+    border: 6px ridge #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 300px; 
+    margin-right: 300px;
+}
+
+input[type=text], input[type=password]{   
+        width: 200px;   
+        margin: 8px;  
+        padding: 20px;   
+        display: inline-block;   
+        border: 3px solid rgb(3, 82, 68);   
+        box-sizing: border-box;   
+        text-align: center;
+        display: inline-block;
+    }  
+
+.tabpage {
+  color: rgb(0, 0, 0);
+  display: none;
+  padding: 25px;
+  margin: 15px;
+  height: auto;
+  border: 3px solid black;
+}
+textarea{
+        width: 25%;
+        height: 200px;   
+        margin: 8px;  
+        padding: 20px;   
+        display: inline-block;   
+        border: 3px solid rgb(3, 82, 68);   
+        box-sizing: border-box;   
+        text-align: center;
+        display: inline-block;
+}
+
+select {
+  width: 20%;
+  padding: 25px;
+  background-color: #f6f6f6;
+}
+.select1{
+    width: 30%;
+    padding: 25px;
+    background-color: #f6f6f6;
+}
+hr.line{
+    border-top: 5px solid rgb(101, 101, 101);
+    margin: none;
+}
+button{
+    font-size: 16px;
+    border: 3px ridge gray;
+    margin-bottom: 30px;
+}
+.button:active {
+    background-color: rgb(158, 158, 159);
+    box-shadow: 0 5px rgb(80, 79, 79);
+    transform: translate(4px, 3px);
+}
+
+.button:hover {
+  background-color:rgb(158, 158, 159);
+}
+
+
+
+#PersonalInfo {background-color: rgb(240, 236, 255);}
+#Education {background-color: rgb(240, 236, 255);}
+#Experience {background-color:  rgb(240, 236, 255);}
+#Salary {background-color:  rgb(240, 236, 255);}
+#WorkEthic{background-color:  rgb(240, 236, 255);}
+#Job{background-color:  rgb(240, 236, 255);}
+#Skill{background-color:  rgb(240, 236, 255);}
+</style>
+</head>
+<body> 
+<img style="display: inline-block; border: 3px solid black;" src="e48a8040cd7d4af39c88ff21623a51a5.png" alt="logo" width="125" height="125">
+<div class="body">
+<h1 class="h">Online CV Builder</h1>
+<hr class="line">
+<br>
+<br>
+<button class="tabbutton" onclick="OpenTab('PersonalInfo', this, 'rgb(35, 125, 243)')" id="defaultOpen">Personal Info</button>
+<button class="tabbutton" onclick="OpenTab('Education', this, 'rgb(35, 125, 243)')">Education</button>
+<button class="tabbutton" onclick="OpenTab('Experience', this, 'rgb(35, 125, 243)')">Experience</button>
+<button class="tabbutton" onclick="OpenTab('Salary', this, 'rgb(35, 125, 243)')">Salary</button>
+<button class="tabbutton" onclick="OpenTab('WorkEthic', this, 'rgb(35, 125, 243)')">Work Ethic</button>
+<button class="tabbutton" onclick="OpenTab('Job', this, 'rgb(35, 125, 243)')">Job</button>
+<button class="tabbutton" onclick="OpenTab('Skill', this, 'rgb(35, 125, 243)')">Skill</button>
+
+<div id="PersonalInfo" class="tabpage">
+    <h1 class="box">Private information</h1>
+    <label>Name: </label> 
+    <label class="tab">Phone number:</label>
+    <label class="tab">Age:</label> 
+    <label class="tab1">Email:</label>
+    <label class="tab1">Degree:</label>
+    <label class="tab">&emsp;&emsp;&emsp;Address:</label>
+    <br>  
+    <input type="text" placeholder="input name" name="Name" required>   
+    <input type="text" placeholder="Input phone number" name="Phone" required> 
+    <input type="text" placeholder="Input Age" name="Age" required> 
+    <input type="text" placeholder="Input Email" name="Email" required> 
+    <input type="text" placeholder="Input Degree" name="Degree" required> 
+    <input type="text" placeholder="Input Address" name="Address" required> 
+</div>
+
+<div id="Education" class="tabpage">
+    <h1 class="box">Education</h1>
+    <p>Write Achievements you previously gained in school and university and any scholarship you have earned</p>
+    <p>e.g. perfect attendance awards, art awards, graduated with honors, Academic Scholarships, Athletic Scholarships, ... </p>
+    <label >&emsp;Achievements:</label>
+    <label class="tab2">Scholarships:</label>
+    <br>  
+    <textarea placeholder="Input Achievement" name="Achievement" required></textarea>
+    <textarea placeholder="Input Scholarships" name="Scholarship" required></textarea>
+</div>
+
+<div id="Experience" class="tabpage">
+    <h1 class="box">Experience</h1>
+    <p>Write name of job you previously worked at and from what did you start and what year did you stop working there</p>
+    <p>e.g. waiter, from 1992 to 1994 </p>
+    <br>
+    <button class="button" onclick="AddExperience()">Add Experience</button>
+    <br>
+    <label>Name of previous job: </label> 
+    <label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Number of years:</label>
+    <br>  
+    <input type="text" placeholder="input job name" name="JName" required>   
+    <input type="text" placeholder="Input years worked" name="YearsWorked" required>
+
+</div>
+
+<div id="Salary" class="tabpage">
+    <h1 class="box">Salary</h1>
+    <label>Salary type: </label> 
+    <label class="tab1">&emsp;Total salary:</label>
+    <br>  
+    <select name="SalaryType" id="SalaryType">
+        <option value="Hourly">Hourly</option>
+        <option value="Salary">Salary</option>
+        <option value="Overtime">Overtime</option>
+        <option value="Bonuses">Bonuses</option>
+    </select>  
+    <input type="text" placeholder="Input total" name="TotalSalary" required> 
+</div>
+
+<div id="WorkEthic" class="tabpage">
+    <h1 class="box">Work Ethic</h1>
+    <p>Describe your personality in the work place, how well you can work with in a team and what you can contribute to the company </p>
+    <label >&emsp;Dedication:</label>
+    <label class="tab2">&emsp;&emsp;Reliability:</label>
+    <label class="tab2">&emsp;Productivity:</label>
+    <br>  
+    <textarea placeholder="Describe how dedicated you are to the work" name="Dedication" required></textarea>
+    <textarea placeholder="Describe how well you can work with others" name="Reliability" required></textarea>
+    <textarea placeholder="Describe what you can contribute" name="Productivity" required></textarea>
+</div>
+
+<div id="Job" class="tabpage">
+    <h1 class="box">Job</h1>
+    <p>choose your field of work and name your wanted position within the company</p>
+    <label>Job type: </label> 
+    <label class="tab2">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Job name:</label>
+    <br>  
+    <select class="select1" name="JobType" id="JobType" onchange="input(this.options[this.selectedIndex].value)">
+        <option value="== Input job type ==">== Input job type ==</option>
+        <option value="Architecture and Construction">Architecture and Construction</option>
+        <option value="Arts, Audio/Video Technology, and Communication">Arts, Audio/Video Technology, and Communication</option>
+        <option value="Business and Finance">Business and Finance</option>
+        <option value="Education and Training">Education and Training</option>
+        <option value="Government and Public Administration">Government and Public Administration</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Law, Public Safety, Corrections, and Security">Law, Public Safety, Corrections, and Security</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Science, Technology, Engineering, and Math">Science, Technology, Engineering, and Math</option>
+        <option value="Other">Other</option>
+    </select>  
+    <input type="text" placeholder="Input job name" name="JobName" required>
+    <br>
+    <div id="JobOther"></div> 
+</div>
+
+<div id="Skill" class="tabpage">
+    <h1 class="box">Skill</h1>
+    <p>choose type of skill and write name of the skill</p>
+    <br>
+    <button class="button" onclick="AddSkill()">Add Skill</button>
+    <br>
+    <label>Skill type: </label> 
+    <label class="tab2">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Skill name:</label>
+    <br>  
+    <select class="select1" name="SkillType" id="SkillType">
+        <option value="== Input Skill type ==">== Input Skill type ==</option>
+        <option value="Soft skills">Soft skills</option>
+        <option value="Technical skills">Technical skills</option>
+    </select>  
+    <input type="text" placeholder="Input Skill name" name="SkillName" required>
+</div>
+
+<script>
+function OpenTab(pageName,elmnt,color) {
+  var i, tabpage, tabbutton;
+  tabpage = document.getElementsByClassName("tabpage");
+  for (i = 0; i < tabpage.length; i++) {
+    tabpage[i].style.display = "none";
+  }
+  tabbutton = document.getElementsByClassName("tabbutton");
+  for (i = 0; i < tabbutton.length; i++) {
+    tabbutton[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+function input(name){
+  if(name=='Other')document.getElementById('JobOther').innerHTML='Other: <input type="text" placeholder="Input job type" name="Other" />';
+  else document.getElementById('JobOther').innerHTML='';
+}
+
+document.getElementById("defaultOpen").click();
+
+function AddExperience() {
+    var y = document.createElement("br");
+    document.getElementById("Experience").appendChild(y);
+
+    var x = document.createElement("input");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "input job name");
+    x.setAttribute("name","JName");
+    document.getElementById("Experience").appendChild(x);
+
+    var z = document.createElement("input");
+    z.setAttribute("type", "text");
+    z.setAttribute("placeholder", "Input years worked");
+    z.setAttribute("name","YearsWorked");
+    document.getElementById("Experience").appendChild(z);
+}
+
+var i = 1;
+
+function AddSkill() {
+
+    var y = document.createElement("br");
+    document.getElementById("Skill").appendChild(y);
+
+    var x = document.createElement("select");
+    x.setAttribute("class", "select1");
+    x.setAttribute("name", "SkillType");
+    x.setAttribute("id", "SkillType"+i);
+    document.getElementById("Skill").appendChild(x);
+
+    var z = document.createElement("option");
+    z.setAttribute("value", "== Input Skill type ==");
+    var t = document.createTextNode("== Input Skill type ==");
+    z.appendChild(t);
+    document.getElementById("SkillType"+i).appendChild(z);
+
+    var a = document.createElement("option");
+    a.setAttribute("value", "Soft skills");
+    var r = document.createTextNode("Soft skills");
+    a.appendChild(r);
+    document.getElementById("SkillType"+i).appendChild(a);
+
+    var b = document.createElement("option");
+    b.setAttribute("value", "Technical skills");
+    var d = document.createTextNode("Technical skills");
+    b.appendChild(d);
+    document.getElementById("SkillType"+i).appendChild(b);
+
+    var v = document.createElement("input");
+    v.setAttribute("type", "text");
+    v.setAttribute("placeholder", "Input Skill name");
+    v.setAttribute("name","SkillName");
+    document.getElementById("Skill").appendChild(v);
+
+    i++;
+}
+
+</script>
+</div>
+</body>
+</html> 

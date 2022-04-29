@@ -1,0 +1,123 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<link rel="icon" type="image/x-icon" href="/Users/leon/Downloads/Aproject/tie.png">
+<style>   
+Body {  
+    font-family: 'Times New Roman', Times, serif;  
+    background-image: url("/Users/leon/Downloads/Aproject/professional-images-for-website-background-13.webp");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}  
+.body{
+    font-family: 'Times New Roman', Times, serif;  
+    background-image: url("/Users/leon/Downloads/Aproject/professional-images-for-website-background-13.webp");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+.box{
+    border: 5px solid #000000;
+    padding-top: 30px;
+    padding-bottom: 30px ;
+    margin-left: 100px; 
+    margin-right: 100px;
+}
+button {
+        background-color: #44ffe0;
+        color: rgb(12, 5, 152);
+        padding: 20px;
+        margin: 10px;
+        border: 5px double rgb(3, 141, 77);
+        cursor: pointer;
+        width: 50%;
+        text-align: center;
+        font-size: 16px;
+        }
+ form {   
+        border: 3px solid #03436d;   
+        text-align: center;
+    }   
+ input[type=text], input[type=password] {   
+        width: 80%;   
+        margin: 8px;  
+        padding: 20px;   
+        display: inline-block;   
+        border: 3px solid rgb(10, 121, 102);   
+        box-sizing: border-box;   
+        text-align: center;
+    }  
+.button:hover {   
+        background-color: #9cf0e2;
+}
+.button:active {
+    background-color: #9cf0e2;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+ .container {   
+        padding: 20px;   
+        background-color: rgb(0, 0, 0);  
+        border: 5px double greenyellow;
+    }
+
+h1 {
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+p {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 16px;
+}
+label{
+    color: rgb(4, 179, 170);
+    text-align: center;
+    font-size: 16px;
+}
+hr.line{
+    border-top: 5px solid rgb(0, 0, 0);
+    margin: none;
+}
+</style>   
+</head>    
+<body>  
+    <img style="display: inline-block; border: 3px solid black;" src="e48a8040cd7d4af39c88ff21623a51a5.png" alt="logo" width="125" height="125">
+    <div class="body">  
+    <h1 class="box"> Online CV builder </h1>
+    <p> Welcome to online CV builder </p>
+    <p> The easiest and most convenient option for building a resume </p>
+    <hr class="line">
+    <br/>
+    <form>  
+        <div class="container">   
+            <label>Username : </label>
+            <br/>   
+            <input type="text" placeholder="Input Username" name="username" required>  
+            <br/>
+            <label>Password : </label>
+            <br/>   
+            <input type="password" placeholder="Input Password" name="password" required> 
+            <button type="submit" class="button" onclick="check(this.form)">Login</button>
+        </div>   
+    </form>
+    <script language="javascript">
+        function check(form) { 
+            if(form.username.value == "leon" && form.password.value == "44") {
+                alert("correct")
+            }
+            else {
+                alert("username or password incorrect")
+            }
+        }
+    </script>
+    </div>     
+</body>     
+</html>
