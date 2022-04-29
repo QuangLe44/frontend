@@ -3,11 +3,11 @@
 <head>  
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title> Login Page </title>  
-<link rel="icon" type="image/x-icon" href="/Users/leon/Downloads/Aproject/tie.png">
+<link rel="icon" type="image/x-icon" href="tie.png">
 <style>   
 Body {  
     font-family: 'Times New Roman', Times, serif;  
-    background-image: url("/Users/leon/Downloads/Aproject/professional-images-for-website-background-13.webp");
+    background-image: url("professional-images-for-website-background-13.webp");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ Body {
 }  
 .body{
     font-family: 'Times New Roman', Times, serif;  
-    background-image: url("/Users/leon/Downloads/Aproject/professional-images-for-website-background-13.webp");
+    background-image: url("professional-images-for-website-background-13.webp");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
