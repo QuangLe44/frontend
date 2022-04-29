@@ -141,7 +141,9 @@ button{
   background-color:rgb(158, 158, 159);
 }
 
-
+.date{
+    margin: 15px;
+}
 
 #PersonalInfo {background-color: rgb(240, 236, 255);}
 #Education {background-color: rgb(240, 236, 255);}
@@ -203,11 +205,12 @@ button{
     <button class="button" onclick="AddExperience()">Add Experience</button>
     <br>
     <label>Name of previous job: </label> 
-    <label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Number of years:</label>
+    <label>&emsp;&emsp;&emsp;Start date:</label>
+    <label>&emsp;&emsp;&emsp;&emsp;&emsp;End date:</label>
     <br>  
     <input type="text" placeholder="input job name" name="JName" required>   
-    <input type="text" placeholder="Input years worked" name="YearsWorked" required>
-
+    <input class="date" type="date" ID="DateStart" name="DateStart" required>
+    <input class="date" type="date" ID="DateEnd" name="DateEnd" required>
 </div>
 
 <div id="Salary" class="tabpage">
@@ -310,10 +313,18 @@ function AddExperience() {
     document.getElementById("Experience").appendChild(x);
 
     var z = document.createElement("input");
-    z.setAttribute("type", "text");
-    z.setAttribute("placeholder", "Input years worked");
-    z.setAttribute("name","YearsWorked");
+    z.setAttribute("class", "date");
+    z.setAttribute("type", "date");
+    z.setAttribute("id", "DateStart");
+    z.setAttribute("name","DateStart");
     document.getElementById("Experience").appendChild(z);
+
+    var t = document.createElement("input");
+    t.setAttribute("class", "date");
+    t.setAttribute("type", "date");
+    t.setAttribute("id", "DateEnd");
+    t.setAttribute("name","DateEnd");
+    document.getElementById("Experience").appendChild(t);
 }
 
 var i = 1;
@@ -359,4 +370,4 @@ function AddSkill() {
 </script>
 </div>
 </body>
-</html> 
+</html>  
